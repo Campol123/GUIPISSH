@@ -4,7 +4,7 @@ ssh = paramiko.SSHClient()
 g = 0
 
 ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-layout1 = [[sg.Text("Enter IP: "), sg.InputText()],[sg.Text("Enter Port: "), sg.InputText()],[sg.Text("Enter Username: "), sg.InputText()],[sg.Text('Password: '), sg.InputText()],[sg.Button("CONNECT")]]
+layout1 = [[sg.Text("Enter IP: "), sg.InputText()],[sg.Text("Enter Port (default is 22): "), sg.InputText()],[sg.Text("Enter Username: "), sg.InputText()],[sg.Text('Password: '), sg.InputText()],[sg.Button("CONNECT")]]
 window = sg.Window('Log In', layout1, size=(600,200))
 values = window.read()
 
